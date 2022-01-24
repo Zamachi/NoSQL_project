@@ -1,6 +1,6 @@
 <?php
 
-$konekcija = new mysqli('127.0.0.1','','', 'nosql');
+$konekcija = new mysqli('127.0.0.1','root','', 'nosql');
 
 $id = (int) $_REQUEST['id_entiteta'];
 
