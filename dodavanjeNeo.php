@@ -5,10 +5,6 @@ require_once './Neo4jManagement.php';
 $br_entiteta = (int) $_REQUEST['br_entiteta_neo4j'];
 $br_atributa = (int) $_REQUEST['br_atributa_neo4j'];
 
-$merenja_dodavanja_entiteta=[];
-$merenja_dodavanja_atributa=[];
-$merenje_jedne_iteracije=[];
-
 $clientNosql->run('MATCH (n)
 DETACH DELETE n');
 
@@ -19,19 +15,17 @@ for ($i=0; $i < $br_atributa; $i++) {
     $query= $query . "(a{$i}:Attribute{Name: 'A{$i}', Value: 'A{$i}'}),";
     // $clientNosql->run("CREATE(a{$i}:Attribute{Name: 'A{$i}', Value: 'A{$i}'})");
 }
-$query = substr($query, 0, strlen($query)-1);
-$clientNosql->run($query);
 
-$query = "CREATE";
 for ($i=0; $i < $br_entiteta; $i++) { 
     $query = $query . "(e{$i}:Entity{}),";
+}
+for ($i=0; $i < $br_entiteta; $i++) { 
     for ($j=0; $j < $br_atributa; $j++) { 
         $query = $query . "((e{$i})-[:POSEDUJE]->(a{$j})),";
     }
 }
 $query = substr($query, 0, strlen($query)-1);
 $clientNosql->run($query);
-
 $kraj_svih_upisa = microtime(true) - $pocetak_merenja;
 ?>
 
