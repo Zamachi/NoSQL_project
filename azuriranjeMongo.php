@@ -18,7 +18,7 @@ foreach ($sviEntiteti as $entitet) {
                'Name' => $attribute['Name']]
            ]
        ], [
-           '$set' => [ 'Name' => 'IZMENJEN', 'Value' => 'IZMENJEN']
+           '$set' => [ 'Value' => 'IZMENJEN']
        ]); 
     }
     // $attributes->updateMany(

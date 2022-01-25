@@ -1,5 +1,6 @@
 {
     "require": {
-        "mongodb/mongodb": "^1.11"
+        "mongodb/mongodb": "^1.11",
+        "laudis/neo4j-php-client": "^2.4"
     }
 }

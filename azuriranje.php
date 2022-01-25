@@ -2,8 +2,6 @@
 
 $konekcija = new mysqli('127.0.0.1','root','', 'nosql');
 
-$id = (int) $_REQUEST['id_entiteta'];
-
 $merenje_izmene_svih = 0;
 $merenje_izmene_sa_uslovom = 0;
 

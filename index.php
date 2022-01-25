@@ -56,7 +56,6 @@ require_once __DIR__ . '/vendor/autoload.php';
             </legend>
 
             <form action="azuriranje.php" target="_blank" name="azuriranje">
-                Koji ID apdejtujemo: <input type="text" name="id_entiteta"> (Ukoliko posaljemo -1 apdejtovace sve)
                 <br>
                 <button for="azuriranje">Azuriraj</button>
             </form>
@@ -144,6 +143,64 @@ require_once __DIR__ . '/vendor/autoload.php';
             </form>
         </fieldset>
     </div>
+
+    <div>
+
+        <h2>NoSQL baza: Neo4j</h2>
+
+        <fieldset>
+            <legend>
+                Kreiranje Neo baze i kolekcija (Attribute and Entity)
+            </legend>
+
+            <form action="kreiranjeNeo.php" target="_blamnk" name="kreiranjeNeo">
+                <button for="kreiranjeNeo">Kreiraj</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Dodavanje entiteta i atributa u Neo
+            </legend>
+
+            <form action="dodavanjeNeo.php" target="_blank" name="dodavanjeNeo">
+                Broj entiteta: <input type="text" name="br_entiteta_neo4j"> <br>
+                Broj atributa: <input type="text" name="br_atributa_neo4j"> <br>
+                <button for="dodavanjeNeo">Dodaj</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Citanje iz Neo baze
+            </legend>
+
+            <form action="citanjeNeo.php" target="_blank" name="citanjeNeo">
+                <button for="citanjeNeo">Procitaj</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Azuriranje atributa
+            </legend>
+
+            <form action="azuriranjeNeo.php" target="_blank" name="azuriranjeNeo">
+                <button for="azuriranjeNeo">Azuriraj</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Brisanje Neo baze
+            </legend>
+
+            <form action="brisanjeNeo.php" target="_blamnk" name="brisanjeNeo">
+                <button for="brisanjeNeo">Obrisi</button>
+            </form>
+        </fieldset>
+    </div>
+
 </body>
 
 </html>
