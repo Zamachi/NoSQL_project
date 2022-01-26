@@ -15,7 +15,7 @@ for ($i = 0; $i < $br_entiteta; $i++) {
     $result = $konekcija->query('insert into Entity values ()'); //insertuje Entitet(ima samo polje primarnog kljuca koje se automatski inkrem.)
     $entity_id = $konekcija->insert_id; //dohvatamo ID generisan AUTO_INCREMENT-om iz prethodnog query-ja ^
     for ($j = 0; $j < $br_atributa; $j++) {
-        $resu1t = $konekcija->query("insert into Attribute (Entity_ID, Name, Value) values ($entity_id, 'A{$j}', 'V{$j}')");
+        $resu1t = $konekcija->query("INSERT INTO Attribute (Entity_ID, `Name`, `Value`) VALUES ($entity_id, 'A{$j}', 'V{$j}')");
     }
 }
 $kraj_svih_upisa = microtime(true) - $pocetak_merenja;

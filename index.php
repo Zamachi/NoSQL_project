@@ -135,6 +135,16 @@ require_once __DIR__ . '/vendor/autoload.php';
 
         <fieldset>
             <legend>
+                Praznjenje Mongo baze
+            </legend>
+
+            <form action="praznjenjeMongo.php" target="_blamnk" name="praznjenjeMongo">
+                <button for="praznjenjeMongo">Obrisi</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>
                 Brisanje Mongo baze
             </legend>
 
@@ -187,6 +197,16 @@ require_once __DIR__ . '/vendor/autoload.php';
 
             <form action="azuriranjeNeo.php" target="_blank" name="azuriranjeNeo">
                 <button for="azuriranjeNeo">Azuriraj</button>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Praznjenje Neo4j baze
+            </legend>
+
+            <form action="praznjenjeNeo.php" target="_blamnk" name="praznjenjeNeo">
+                <button for="praznjenjeNeo">Obrisi</button>
             </form>
         </fieldset>
 

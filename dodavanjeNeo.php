@@ -13,7 +13,6 @@ $pocetak_merenja = microtime(true);
 $query = "CREATE";
 for ($i=0; $i < $br_atributa; $i++) { 
     $query= $query . "(a{$i}:Attribute{Name: 'A{$i}', Value: 'A{$i}'}),";
-    // $clientNosql->run("CREATE(a{$i}:Attribute{Name: 'A{$i}', Value: 'A{$i}'})");
 }
 
 for ($i=0; $i < $br_entiteta; $i++) { 

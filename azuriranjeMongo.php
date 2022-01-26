@@ -10,21 +10,19 @@ $sviEntiteti = $entities->find();
 
 foreach ($sviEntiteti as $entitet) {
 
-    $atributiZaDatiID = $attributes->find([ 'EntityID' => $entitet['_id']]);
+    $atributiZaDatiID = $attributes->find(['EntityID' => $entitet['_id']]);
     foreach ($atributiZaDatiID as $attribute) {
-       $attributes->updateOne([
-           '$and' => [
-               ['EntityID' => $entitet['_id'],
-               'Name' => $attribute['Name']]
-           ]
-       ], [
-           '$set' => [ 'Value' => 'IZMENJEN']
-       ]); 
+        $attributes->updateOne([
+            '$and' => [
+                [
+                    'EntityID' => $entitet['_id'],
+                    'Name' => $attribute['Name']
+                ]
+            ]
+        ], [
+            '$set' => ['Value' => 'IZMENJEN']
+        ]);
     }
-    // $attributes->updateMany(
-    //     ['EntityID' => $entitet['_id']],
-    //     [ '$set' => [ 'Name' => 'IZMENJEN', 'Value' => 'IZMENJEN']]
-    // );
 }
 $vremetrajanja = microtime(1) - $start;
 ?>
